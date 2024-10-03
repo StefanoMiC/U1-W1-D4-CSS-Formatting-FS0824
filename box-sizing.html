@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Formatting</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        div span {
+            background-color: red;
+            padding: 1rem;
+            border: 3px solid peachpuff;
+        }
+
+        .box {
+            width: 33.333%;
+            height: 150px;
+            margin-right: -4px;
+            display: inline-block;
+            vertical-align: middle;
+            overflow: auto;
+        }
+
+        .aqua {
+            background-color: aquamarine;
+        }
+
+        .coral {
+            background-color: coral;
+        }
+
+        .golden {
+            background-color: palegoldenrod;
+        }
+
+        section {
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Formatting CSS</h1>
+    <span>Ciao</span>
+    <div>Ciao</div>
+
+    <div>Lorem ipsum, <img
+            src="https://images.unsplash.com/photo-1726682577615-728e4272a60c?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            width="200" /> dolor sit amet consectetur adipisicing <span>elit</span>. Placeat possimus unde in ratione
+        aut ut culpa inventore eligendi nam magnam consectetur, alias quaerat mollitia aspernatur.Tempora similique
+        porro est
+        hic?</div>
+
+    <section>
+        <div class="box aqua">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore corporis animi autem saepe
+            provident ex, quam quia velit, molestiae harum deserunt aspernatur sequi facere ab esse laboriosam unde
+            molestias dignissimos?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet doloribus consequatur odit hic nulla,
+            molestias repellendus quis. Pariatur, quos! Eos, assumenda. Eius, vitae. Aspernatur vitae culpa deleniti
+            eius cumque ab.</div>
+        <div class="box coral">
+            <img src="https://images.unsplash.com/photo-1726682577615-728e4272a60c?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                width="100%" />
+        </div>
+        <div class="box golden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amid dolor lorem ipsum.</div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit eligendi nisi commodi doloribus maiores
+            sapiente qui modi molestias eveniet aliquid dolore quidem tempore, velit tenetur vel, blanditiis molestiae
+            laboriosam minus!</p>
+    </section>
+</body>
+
+</html>

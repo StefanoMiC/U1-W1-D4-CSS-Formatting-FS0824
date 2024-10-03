@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+header {
+  padding-inline: 1rem;
+  background-color: antiquewhite;
+}
+
+header img {
+  height: 65px;
+}
+
+header span {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+header span:hover {
+  color: red;
+}
+
+/* header img, header span {
+    vertical-align: middle;
+    } */
+
+/* header :is(img, span) {
+  vertical-align: middle;
+} */
+
+/* :where e :is fanno la stessa cosa, solo che :is aumenta la specificità del selettore */
+/* sono un approccio moderno al selettore di gruppo */
+header :where(img, span) {
+  vertical-align: middle;
+}
+
+header .menu {
+  padding: 0;
+  display: inline-block;
+  width: 85%;
+  text-align: right;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu li:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.menu li a {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.menu li a:focus {
+  color: blue;
+  outline: none;
+  border-bottom: 3px solid currentColor;
+}
+
+.menu li a:hover {
+  border-bottom: 3px solid currentColor;
+  color: darkcyan;
+}
+
+.menu li a:active {
+  color: red;
+}
+
+.container {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.hero,
+.blob {
+  display: inline-block;
+  margin-right: -4px;
+}
+
+.hero {
+  padding: 1rem;
+  color: white;
+  background-color: #4158d0;
+  background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+  border-radius: 20px;
+  width: calc(100% - 100px);
+  margin-block: 3rem;
+}
+
+.blob {
+  width: 100px;
+  height: 100px;
+  background-color: #ff0099;
+  background-image: linear-gradient(45deg, #3023ae 0%, #ff0099 100%);
+  border-radius: 48% 52% 70% 30% / 45% 51% 49% 55%;
+  margin-left: -40px;
+}
+
+.bg-image {
+  /* la height serve perché il div chiamato bg-image non ha contenuto, collasserebbe altrimenti. */
+  height: 30vh;
+  background-image: url("../img/photo-1727706572437-4fcda0cbd66f.avif");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding-block: 12vh;
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 3px 2px rgb(0 0 0 / 35%);
+}
+
+.image-alt {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(18, 18, 18);
+  text-shadow: 0 3px 2px rgb(0 0 0 / 10%);
+}
+
+.image-alt img {
+  height: 30vh;
+  width: 100%;
+  object-fit: cover;
+}
